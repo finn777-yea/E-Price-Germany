@@ -13,4 +13,5 @@ dependencies = [
     "yfinance>=0.2",
     "jupyter>=1.1",
     "ipykernel>=6.29",
+    "nbstripout>=0.9.1",
 ]

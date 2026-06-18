@@ -26,3 +26,29 @@ This creates a `.venv` virtual environment and installs all required packages au
 ```bash
 source .venv/bin/activate
 ```
+
+### Run Jupyter notebooks
+
+With the environment activated:
+
+```bash
+jupyter lab
+```
+
+Or without activating, using `uv run`:
+
+```bash
+uv run jupyter lab
+```
+
+## Clean notebook commits
+
+This project uses [nbstripout](https://github.com/kynan/nbstripout) to automatically strip cell outputs and execution counts from notebooks before each commit, keeping diffs readable.
+
+After cloning, run once to install the git filter:
+
+```bash
+uv run nbstripout --install
+```
+
+This registers the filter in your local `.git/config`. The `.gitattributes` file already tells git which files to apply it to, so no further configuration is needed.
