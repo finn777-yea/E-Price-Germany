@@ -49,6 +49,7 @@ After cloning, run once to install the git filter:
 
 ```bash
 uv run nbstripout --install
+git config filter.nbstripout.extrakeys "metadata.kernelspec.display_name metadata.language_info.version"
 ```
 
 This registers the filter in your local `.git/config`. The `.gitattributes` file already tells git which files to apply it to, so no further configuration is needed.
